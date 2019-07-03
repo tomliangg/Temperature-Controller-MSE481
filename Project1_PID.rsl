@@ -61,25 +61,23 @@ SOR,29 TOD,F8:3,O:4 EOR,29
 RCM,
 SOR,30 MOV,I:3,F8:99 EOR,30
 RCM,read temp setpoint
-SOR,31 SUB,F8:99,O:4,F8:98 EOR,31
+SOR,31 SUB,N7:0,O:4,N7:1 EOR,31
 RCM,temp error
-SOR,32 XIC,I:1/3 GEQ,F8:98,0 OTE,O:2/4 EOR,32
-RCM,
-SOR,33 EOR,33
+SOR,32 EOR,32
 RCM,storing e values for discretization
-SOR,34 EOR,34
+SOR,33 EOR,33
 RCM,Discretized PID
-SOR,35 EOR,35
+SOR,34 EOR,34
 RCM,initialize u
-SOR,36 EOR,36
+SOR,35 EOR,35
 RCM,du
-SOR,37 EOR,37
+SOR,36 EOR,36
 RCM,u+du
-SOR,38 EOR,38
+SOR,37 EOR,37
 RCM,resetting to prevent integral windup
-SOR,39 EOR,39
+SOR,38 EOR,38
 RCM,Control Signal PWM
-SOR,40 END,40
+SOR,39 END,39
 RCM,
 FILE,SBR 3:
 SOR,0 EOR,0
@@ -248,10 +246,10 @@ BTBL
 0
 0
 NTBL
-640
-0
-0
-0
+768
+-6
+51
+-1
 0
 0
 0
@@ -349,11 +347,11 @@ NTBL
 0
 0
 FTBL
-160
-800
-728
-204
-20
+551
+4131
+3265
+306
+30
 0
 0
 0
@@ -369,7 +367,7 @@ FTBL
 0
 0
 0
-72
+866
 0
 0
 0
@@ -447,8 +445,8 @@ FTBL
 0
 0
 0
--4
-512
+0
+0
 SYMBOLS
 I:1/0 start
 I:1/9 A
