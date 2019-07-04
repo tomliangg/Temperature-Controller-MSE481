@@ -28,37 +28,37 @@ RCM,
 SOR,13 XIC,O:2/3 TON,T4:1,0 EOR,13
 RCM,
 SOR,14 XIC,T4:1/DN CTU,C5:1,0 EOR,14
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,15 XIC,T4:1/DN RES,T4:1 EOR,15
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,16 XIC,O:2/4 TON,T4:3,0 EOR,16
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,17 XIC,T4:3/DN CTU,C5:2,0 EOR,17
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,18 XIC,T4:3/DN RES,T4:3 EOR,18
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,19 MUL,C5:2.ACC,10,N7:0 EOR,19
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,20 TON,T4:4,0 EOR,20
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,21 XIC,T4:4/DN CTU,C5:3,0 EOR,21
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,22 XIC,T4:4/DN RES,T4:4 EOR,22
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,23 ADD,160,C5:1.ACC,F8:0 ADD,F8:0,N7:0,F8:1 EOR,23
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,24 LEQ,F8:1,160 OTE,O:6/0 EOR,24
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,25 XIC,O:6/0 SUB,F8:1,0,F8:2 SUB,F8:2,0,F8:3 EOR,25
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,26 GRT,F8:1,160 OTE,O:6/1 EOR,26
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,27 XIC,O:6/1 XIC,I:1/3 SUB,F8:1,F8:20,F8:2 SUB,F8:2,C5:3.ACC,F8:3 EOR,27
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,28 DIV,F8:3,10,F8:4 EOR,28
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,29 TOD,F8:3,O:4 EOR,29
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,30 MOV,I:3,F8:99 EOR,30
 RCM,read temp setpoint
 SOR,31 EOR,31
@@ -66,22 +66,22 @@ RCM,temp errors
 SOR,32 MOV,F8:97,F8:96 EOR,32
 RCM,storing e values for discretization
 SOR,33 MOV,F8:98,F8:97 EOR,33
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,34 SUB,F8:99,O:4,F8:98 EOR,34
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,35 GRT,F8:10,1000 MOV,16,N7:1 EOR,35
 RCM,Discretized PID (duty cycle control = N7:1)
 SOR,36 GRT,F8:10,500 LEQ,F8:10,1000 MOV,8,N7:1 EOR,36
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,37 GRT,F8:10,250 LEQ,F8:10,500 MOV,4,N7:1 EOR,37
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,38 GRT,F8:10,125 LEQ,F8:10,250 MOV,2,N7:1 EOR,38
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,39 LES,F8:10,125 MOV,0,N7:1 EOR,39
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,40 XIC,S:1/15 MOV,0,F8:10 MOV,10,F8:14 EOR,40
 RCM,initialize u and 1/dt
-SOR,41 XIC,S:1/15 MOV,5,F8:11 MOV,10000,F8:12 MOV,1000,F8:13 EOR,41
+SOR,41 XIC,S:1/15 MOV,1,F8:11 MOV,100,F8:12 MOV,1,F8:13 EOR,41
 RCM,initialize PID controllers (k_c = F8:11; 1/T_i = F8:12; T_d = F8:13)
 SOR,42 JSR,U:3 EOR,42
 RCM,du
@@ -94,7 +94,7 @@ RCM,resetting to prevent integral windup
 SOR,46 XIC,I:1/3 JSR,U:4 EOR,46
 RCM,Control Signal PWM
 SOR,47 EOR,47
-RCM,Manual operation of pumps and mixer
+RCM,
 SOR,48 END,48
 RCM,
 FILE,SBR 3:
@@ -264,7 +264,7 @@ BTBL
 0
 0
 NTBL
-1620
+1650
 0
 0
 0
@@ -365,27 +365,28 @@ NTBL
 0
 0
 FTBL
-431
-2051
-1404
-417
-41
+359
+2009
+1906
+207
+20
 0
 0
 0
 0
 0
 0
-5
-10000
-1000
+1
+100
+1
 10
--115000
--23000
+-80
+-70
+-10
 0
 0
+103
 0
-647
 0
 0
 0
@@ -460,11 +461,10 @@ FTBL
 0
 0
 0
-0
--23
--23
--23
-1024
+-8
+-7
+-7
+512
 SYMBOLS
 I:1/0 start
 I:1/9 A
