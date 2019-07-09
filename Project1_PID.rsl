@@ -483,5 +483,5 @@ O:2/5 Run
 I:3 Setpoint
 F8:97 e(k-2)
 F8:98 e(k-1)
-U:3 PWM control
+U:3 Calculate du
 U:4 PWM control
